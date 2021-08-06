@@ -13,7 +13,8 @@ const URI = process.env.MONGODB_URI
 mongoose.connect(URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology:true
+    useUnifiedTopology:true,
+    useFindAndModify:false
 });
 
 //cuando se conecte quiero escuchar esa cadena de conexion. En una constante llamada connection guardo la propiedad mongoose.connection y cuando la conexion sea abierta quiero que muestre algo por consola
